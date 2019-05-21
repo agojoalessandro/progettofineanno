@@ -1,0 +1,10 @@
+
+<form [formGroup] = "myForm" (ngSubmit) = "onSubmit()">
+  Name : <input type = "text" [formControl] = "myForm.controls['nome']" > <br> 
+  Surname :  <input type = "text" [formControl] = "myForm.controls['cognome']" > <br>
+  Email :  <input type = "email" [formControl] = "myForm.controls['email']" > <br>
+  Password :  <input type = "password" [formControl] = "myForm.controls['password']" > <br>
+  Instrument : <input type = "text" [formControl] = "myForm.controls['strumento']" > <br>
+  
+  <button>Login</button>
+</form>
