@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UtentiComponent } from './utenti/utenti.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { UtentiComponent } from './utenti/utenti.component';
     
   ],
   imports: [
-    BrowserModule, ReactiveFormsModule, FormsModule
+    BrowserModule, ReactiveFormsModule, FormsModule, NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
