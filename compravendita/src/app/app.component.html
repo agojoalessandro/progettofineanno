@@ -2,12 +2,12 @@
 <h3>Find the instrument made for you</h3> <br>
 <div style="background-color: black; color : white; text-align :center;">
   <form [formGroup] = "myForm" (ngSubmit) = "onSubmit()">
-  
+
      Name : <input type = "text" [formControl] = "myForm.controls['nome']" >
      <div *ngIf="!myForm.controls['nome'].valid;" class="alert alert-danger">"name" not valid</div>
      <div *ngIf="myForm.controls['nome'].hasError('required')" class="alert alert-danger">"name" is required</div>
 
-  <br> 
+  <br>
   Surname :  <input type = "text" [formControl] = "myForm.controls['cognome']" >
   <div *ngIf="!myForm.controls['cognome'].valid" class="alert alert-danger">"surname" not valid</div>
   <div *ngIf="myForm.controls['cognome'].hasError('required')" class="alert alert-danger">"surname" is required</div> <br>
@@ -17,12 +17,50 @@
   Password :  <input type = "password" [formControl] = "myForm.controls['password']" >
   <div *ngIf="!myForm.controls['password'].valid" class="alert alert-danger">"password" not valid</div>
   <div *ngIf="myForm.controls['password'].hasError('required')" class="alert alert-danger">"password" is required</div><br>
-  Instrument : <input type = "text" [formControl] = "myForm.controls['strumento']" > 
+  Instrument : <input type = "text" [formControl] = "myForm.controls['strumento']" >
   <div *ngIf="!myForm.controls['strumento'].valid" class="alert alert-danger">"instrument" not valid</div>
   <div *ngIf="myForm.controls['strumento'].hasError('required')" class="alert alert-danger">"instrument" is required</div><br>
-  
+
   <button>Login</button>
 </form>
 </div>
 
 <app-utenti [ut] = "arrayUtenti"></app-utenti>
+<form [formGroup]="myForm2" (ngSubmit)="onSubmit2()" class="jumbotron" style="float:center;">
+      <div class="form-group">
+        Email <input type="email" [formControl]="myForm2.controls['email2']">
+        <div *ngIf="!myForm2.controls['email2'].valid" class="alert alert-danger">"Email" not valid
+        </div>
+        <div *ngIf="myForm2.controls['email2'].hasError('required')" class="alert alert-danger">Email is required
+        </div>
+        Password <input type="password" [formControl]="myForm2.controls['psw']">
+        <div *ngIf="!myForm2.controls['psw'].valid" class="alert alert-danger">"Password" not valid
+        </div>
+        <div *ngIf="myForm2.controls['psw'].hasError('required')" class="alert alert-danger">Password is required
+        </div>
+
+      </div>
+      <button class="btn btn-primary">Login</button>
+
+
+    </form>
+
+    <div class="container" style="float: center;">
+      <form [formGroup]="myForm3" (ngSubmit)="onSubmit3()" class="jumbotron">
+        <ul>
+         Comment here: <input type="text" [formControl]="myForm3.controls['comment']"><br>
+          Name : <input type = "text" [formControl] = "myForm.controls['nome']" >
+     <div *ngIf="!myForm.controls['nome'].valid;" class="alert alert-danger">"name" not valid</div>
+     <div *ngIf="myForm.controls['nome'].hasError('required')" class="alert alert-danger">"name" is required</div>
+
+  <br>
+  Surname :  <input type = "text" [formControl] = "myForm.controls['cognome']" >
+  <div *ngIf="!myForm.controls['cognome'].valid" class="alert alert-danger">"surname" not valid</div>
+  <div *ngIf="myForm.controls['cognome'].hasError('required')" class="alert alert-danger">"surname" is required</div>
+
+          <button>Comment</button>
+        </ul>
+
+      </form>
+
+<app-new-object [us] = "user"></app-new-object>

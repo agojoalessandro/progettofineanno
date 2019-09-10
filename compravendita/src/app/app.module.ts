@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { UtentiComponent } from './utenti/utenti.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NewObjectComponent } from './new-object/new-object.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UtentiComponent
+    UtentiComponent,
+    NewObjectComponent
     
   ],
   imports: [

@@ -1,0 +1,13 @@
+<form [formGroup] = "myForm4" (ngSubmit) = "onSubmitOggetti()" class="jumbotron">
+  Inserisci oggetto <input type = "text" [formControl] = "myForm4.controls['oggetto']">
+  Inserisci descrizione <input type = "text" [formControl] = "myForm4.controls['descrizione']">
+  Inserisci prezzo <input type = "number" [formControl] = "myForm4.controls['prezzo']">
+  Inserisci link <input type = "url" [formControl] = "myForm4.controls['link']">
+  <button class = "btn btn-primary">Add Object</button>
+<div>
+  <ul *ngFor = "let object of user ">
+    {{object.nome}} {{oggetto.cognome}} : {{oggetto.oggetto}} {{oggetto.descrizione}} {{oggetto.prezzo}} {{oggetto.link}}
+  </ul>
+</div>
+
+</form>
